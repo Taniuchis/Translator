@@ -1,0 +1,18 @@
+= form_for @spanish_word do |f|
+  - if @spanish_word.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@spanish_word.errors.count, "error")} prohibited this spanish_word from being saved:"
+      %ul
+        - @spanish_word.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :kind
+    = f.text_field :kind
+  .field
+    = f.text_field :english_word_id, hidden: true
+  .actions
+    = f.submit 'Save'

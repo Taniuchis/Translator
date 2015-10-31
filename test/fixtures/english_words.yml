@@ -2,10 +2,8 @@
 
 one:
   name: MyString
-  type: 
-  meaning: MyText
+  kind: MyString
 
 two:
   name: MyString
-  type: 
-  meaning: MyText
+  kind: MyString

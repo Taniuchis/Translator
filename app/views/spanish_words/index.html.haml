@@ -1,0 +1,25 @@
+%h1 Listing spanish_words
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Kind
+      %th English word
+      %th
+      %th
+      %th
+
+  %tbody
+    - @spanish_words.each do |spanish_word|
+      %tr
+        %td= spanish_word.name
+        %td= spanish_word.kind
+        %td= spanish_word.english_word
+        %td= link_to 'Show', spanish_word
+        %td= link_to 'Edit', edit_spanish_word_path(spanish_word)
+        %td= link_to 'Destroy', spanish_word, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Spanish word', new_spanish_word_path

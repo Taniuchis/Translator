@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+	%b Name:
+	= @english_word.name
+%p
+	%b Kind:
+	= @english_word.kind
+
+- if @english_word.spanish_word.nil?
+	%p
+		%b Add spanish definition
+		%br
+		= link_to 'Add', new_spanish_word_path(id: @english_word)
+- else
+	%p
+		%b Spanish definition
+		%br
+		= link_to @english_word.spanish_word.name, spanish_word_path(@english_word.spanish_word)
+
+
+= link_to 'Edit', edit_english_word_path(@english_word)
+\|
+= link_to 'Back', english_words_path

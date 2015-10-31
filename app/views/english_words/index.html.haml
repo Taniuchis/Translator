@@ -1,0 +1,23 @@
+%h1 Listing english_words
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Kind
+      %th
+      %th
+      %th
+
+  %tbody
+    - @english_words.each do |english_word|
+      %tr
+        %td= english_word.name
+        %td= english_word.kind
+        %td= link_to 'Show', english_word
+        %td= link_to 'Edit', edit_english_word_path(english_word)
+        %td= link_to 'Destroy', english_word, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New English word', new_english_word_path

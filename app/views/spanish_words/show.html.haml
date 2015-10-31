@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @spanish_word.name
+%p
+  %b Kind:
+  = @spanish_word.kind
+%p
+  %b English word:
+  = @spanish_word.english_word
+
+= link_to 'Edit', edit_spanish_word_path(@spanish_word)
+\|
+= link_to 'Back', spanish_words_path

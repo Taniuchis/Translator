@@ -11,14 +11,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151019163616) do
+ActiveRecord::Schema.define(version: 20151031005909) do
 
-  create_table "words", force: :cascade do |t|
+  create_table "english_words", force: :cascade do |t|
     t.string   "name"
-    t.string   "type"
-    t.text     "meaning"
+    t.string   "kind"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "spanish_words", force: :cascade do |t|
+    t.string   "name"
+    t.string   "kind"
+    t.integer  "english_word_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "spanish_words", ["english_word_id"], name: "index_spanish_words_on_english_word_id"
+
+  create_table "tenses", force: :cascade do |t|
+    t.string   "i"
+    t.string   "you"
+    t.string   "he"
+    t.string   "she"
+    t.string   "it"
+    t.string   "they"
+    t.string   "we"
+    t.string   "you_p"
+    t.integer  "word_id"
+    t.string   "word_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "tenses", ["word_type", "word_id"], name: "index_tenses_on_word_type_and_word_id"
 
 end

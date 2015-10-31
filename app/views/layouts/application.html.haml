@@ -1,0 +1,19 @@
+!!!
+%html
+  %head
+    %title Translator
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    %nav.cabecera
+      %ul
+        %li
+          %a{:href => "#"} HOME
+        %li
+          %a{:href => "#"} ENGLISH
+        %li
+          %a{:href => "#"} SPANISH
+    %div
+      mnbdckjfbkjbvkjfdb
+    = yield

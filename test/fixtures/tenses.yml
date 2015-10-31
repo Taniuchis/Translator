@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  i: MyString
+  you: MyString
+  he: MyString
+  she: MyString
+  it: MyString
+  they: MyString
+  we: MyString
+  you_p: MyString
+  word_id: 
+
+two:
+  i: MyString
+  you: MyString
+  he: MyString
+  she: MyString
+  it: MyString
+  they: MyString
+  we: MyString
+  you_p: MyString
+  word_id: 
