@@ -1,8 +1,23 @@
 %p#notice= notice
 
 %p
-	%b Name:
-	= @english_word.name
+	%b Neutral:
+	= @english_word.neutral
+%p
+	%b Neutral Plural:
+	= @english_word.neutral_plural
+%p
+	%b Male:
+	= @english_word.male
+%p
+	%b Male PLural:
+	= @english_word.male_plural
+%p
+	%b Female:
+	= @english_word.female
+%p
+	%b Female Plural:
+	= @english_word.female_plural
 %p
 	%b Kind:
 	= @english_word.kind
@@ -16,7 +31,7 @@
 	%p
 		%b Spanish definition
 		%br
-		= link_to @english_word.spanish_word.name, spanish_word_path(@english_word.spanish_word)
+		= link_to 'Definition', spanish_word_path(@english_word.spanish_word)
 
 
 = link_to 'Edit', edit_english_word_path(@english_word)

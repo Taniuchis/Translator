@@ -14,14 +14,24 @@
 ActiveRecord::Schema.define(version: 20151031005909) do
 
   create_table "english_words", force: :cascade do |t|
-    t.string   "name"
+    t.string   "neutral"
+    t.string   "male"
+    t.string   "female"
+    t.string   "neutral_plural"
+    t.string   "male_plural"
+    t.string   "female_plural"
     t.string   "kind"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   create_table "spanish_words", force: :cascade do |t|
-    t.string   "name"
+    t.string   "neutral"
+    t.string   "male"
+    t.string   "female"
+    t.string   "neutral_plural"
+    t.string   "male_plural"
+    t.string   "female_plural"
     t.string   "kind"
     t.integer  "english_word_id"
     t.datetime "created_at",      null: false

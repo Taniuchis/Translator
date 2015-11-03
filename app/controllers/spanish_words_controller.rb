@@ -14,7 +14,8 @@ class SpanishWordsController < ApplicationController
 
   # GET /spanish_words/new
   def new
-    @spanish_word = SpanishWord.new english_word_id: params[:id]
+    english_word = EnglishWord.find(params[:id])
+    @spanish_word = SpanishWord.new kind: english_word.kind, english_word_id: english_word.id
   end
 
   # GET /spanish_words/1/edit
@@ -69,6 +70,6 @@ class SpanishWordsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def spanish_word_params
-      params.require(:spanish_word).permit(:name, :kind, :english_word_id)
+      params.require(:spanish_word).permit(:neutral, :neutral_plural, :male, :male_plural, :female, :female_plural, :kind, :english_word_id)
     end
 end

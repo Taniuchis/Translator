@@ -69,6 +69,6 @@ class EnglishWordsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def english_word_params
-      params.require(:english_word).permit(:name, :kind)
+      params.require(:english_word).permit(:neutral, :neutral_plural, :male, :male_plural, :female, :female_plural, :kind)
     end
 end

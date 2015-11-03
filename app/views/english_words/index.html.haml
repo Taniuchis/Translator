@@ -3,7 +3,12 @@
 %table
   %thead
     %tr
-      %th Name
+      %th Neutral
+      %th Neutral Plural
+      %th Male
+      %th Male Plural
+      %th Female
+      %th Female Plural
       %th Kind
       %th
       %th
@@ -12,7 +17,12 @@
   %tbody
     - @english_words.each do |english_word|
       %tr
-        %td= english_word.name
+        %td= english_word.neutral
+        %td= english_word.neutral_plural
+        %td= english_word.male
+        %td= english_word.male_plural
+        %td= english_word.female
+        %td= english_word.female_plural
         %td= english_word.kind
         %td= link_to 'Show', english_word
         %td= link_to 'Edit', edit_english_word_path(english_word)

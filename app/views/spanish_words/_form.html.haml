@@ -7,11 +7,25 @@
           %li= msg
 
   .field
-    = f.label :name
-    = f.text_field :name
+    = f.label :neutral
+    = f.text_field :neutral
   .field
-    = f.label :kind
-    = f.text_field :kind
+    = f.label :neutral_plural
+    = f.text_field :neutral_plural
+  .field
+    = f.label :male
+    = f.text_field :male
+  .field
+    = f.label :male_plural
+    = f.text_field :male_plural
+  .field
+    = f.label :female
+    = f.text_field :female
+  .field
+    = f.label :female_plural
+    = f.text_field :female_plural
+  .field
+    = f.text_field :kind, hidden: true
   .field
     = f.text_field :english_word_id, hidden: true
   .actions
